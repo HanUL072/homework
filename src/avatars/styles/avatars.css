@@ -1,0 +1,46 @@
+/* Avatars button */
+button {
+  padding: 8px;
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #fff;
+  /* border: 1px solid #000; */
+  padding: 100px;
+  gap: 20px;
+  width: 380px;
+}
+
+.profileImg {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+div img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.status-on {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: #4cfe88;
+}
+
+.offline {
+  background-color: #dbdbdb;
+}
