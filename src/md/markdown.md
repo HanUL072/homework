@@ -24,7 +24,7 @@ HTML : HyperText Markup Language, 웹 페이지의 구조를 만드는 언어
 
 - 이미지 태그 방식
 
-1. <img src="/src/assets/svg/chitchat.svg" alt="" width="100" height="100" /> - 이미지 자원 요청
+1. <img src="./src/assets/svg/chitchat.svg" alt="" width="100" height="100" /> - 이미지 자원 요청
 2. svg = 코드 너무 기니까 패스 - 이미지가 코드화 되어있어서 성능이 더 좋음
    - svg 의 장점 : 색 지정 가능한데, css 에서 태그에 접근해서 색 변경 가능
      (이외 <object> <embed> 도 가능 한데 <object>는 이미지 뿐 아닌 다양한 객체 삽입 가능 (ex. pdf ))
