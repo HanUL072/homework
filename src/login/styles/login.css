@@ -1,0 +1,209 @@
+/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+:root {
+  --white: #ffffff;
+  --gray-100: #dadada;
+  --gray-200: #999999;
+  --black: #121212;
+  --green-100: #e9f0fd;
+  --green-200: #03cf5d;
+
+  --text-4: 0.25rem;
+  --text-8: 0.5rem;
+  --text-10: 0.625rem;
+  --text-14: 0.875rem;
+  --text-16: 1rem;
+  --text-20: 1.25rem;
+
+  --spacing-5: 0.3125rem;
+  --spacing-20: 1.25rem;
+  --spacing-45: 2.8125rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-weight: normal;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 입력서식 스타일링 */
+.login-input {
+  --input_border-basic: var(--gray-100);
+
+  input {
+    border: 1px solid var(--input_border-basic);
+    font-size: var(--text-14);
+    height: var(--spacing-45);
+    width: 500px;
+    padding: 0 20px 0 20px;
+  }
+  &:focus {
+    --focus_border_color: var(--green);
+    --foucs_background: var(--green_light);
+
+    outline: none;
+  }
+
+  input:user-invalid + small {
+    display: block;
+    color: red;
+  }
+
+  input:focus {
+    outline: 1px solid var(--naver-green);
+    background: var(--focus-naver-blue);
+  }
+}
+
+/* 로그인 버튼 */
+.fill-button {
+  border: 0;
+  font-size: var(--text-16);
+  width: 500px;
+  height: 45px;
+  background: var(--green-200);
+  color: var(--white);
+}
+
+/* 로그인 상태 유지 */
+.check-login {
+  width: 150px;
+  display: inline-block;
+}
+
+/* 포커스 스타일 */
+input[type='checkbox']:focus + label {
+  outline: 2px solid #03cf5d;
+  outline-offset: 4px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+.svg-toggle {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.on-icon,
+.off-icon {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+
+.checkbox:checked + .svg-toggle .on-icon {
+  display: block;
+}
+
+.checkbox:checked + .svg-toggle .off-icon {
+  display: none;
+}
+
+.checkbox:not(:checked) + .svg-toggle .on-icon {
+  display: none;
+}
+
+.checkbox:not(:checked) + .svg-toggle .off-icon {
+  display: block;
+}
+
+p {
+  display: inline-block;
+}
+
+/* IP 보안 */
+.ip-security-wrap {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  display: inline-block;
+
+  .ip-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .ip-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 400;
+    color: #999;
+  }
+
+  .ip-toggle:checked + .ip-toggle-label .status-on {
+    display: inline;
+    color: #03cf5d;
+  }
+
+  .ip-toggle:checked + .ip-toggle-label .status-off {
+    display: none;
+  }
+
+  .ip-toggle:not(:checked) + .ip-toggle-label .status-on {
+    display: none;
+  }
+
+  .ip-toggle:not(:checked) + .ip-toggle-label .status-off {
+    display: inline;
+  }
+
+  .status-on,
+  .status-off {
+    font-weight: 400;
+  }
+
+  a.ip-link {
+    display: inline-block;
+    font-weight: 400;
+    color: #000;
+    text-decoration: none;
+  }
+
+  a.ip-link:focus {
+    outline: 2px solid #03cf5d;
+    outline-offset: 4px;
+  }
+
+  .ip-toggle:focus + .ip-toggle-label {
+    outline: 2px solid #03cf5d;
+    outline-offset: 4px;
+  }
+}
+
+.naver-form {
+  width: 100%;
+  padding-inline: var(--spacing-20);
+
+  ul {
+    list-style: none;
+    padding: var(--spacing-8);
+    border-top: 1px solid var(--gray);
+  }
+}
