@@ -33,6 +33,7 @@ ul {
   /* pc 버전 (1024px 이상)*/
   @media (width >= 1024px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
 
     #iPadPro {
       background-image: url(../products/ipad_pro_wide.jpeg);
