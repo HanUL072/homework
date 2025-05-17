@@ -1,0 +1,105 @@
+@import './reset.css';
+@import './theme.css';
+@import './base.css';
+
+body {
+  margin: 50px;
+}
+
+.card-wrapper {
+  --font-color: var(--white);
+  --card-size: var(--size);
+
+  background-color: var(--black);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--font-color);
+  block-size: var(--card-size);
+  text-align: center;
+
+  p {
+    margin-block-end: var(--small-spacing);
+  }
+
+  .product-name {
+    font-size: var(--large-text);
+    font-weight: 700;
+
+    padding-top: var(--large-spacing);
+    margin-block-end: var(--small-spacing);
+  }
+
+  .product-text {
+    font-size: var(--base-text);
+  }
+
+  .product-date {
+    font-size: var(--small-text);
+    color: var(--gray);
+  }
+
+  .button-wrapper {
+    --point-color: var(--blue-300);
+
+    font-size: var(--xx-small-text);
+    display: inline-flex;
+    column-gap: var(--small-spacing);
+
+    a {
+      border: 1px solid var(--point-color);
+      border-radius: 100px;
+      padding-block: var(--x-small-spacing);
+      padding-inline: var(--small-spacing);
+
+      &.button-more {
+        background-color: var(--point-color);
+        color: var(--white);
+      }
+
+      &.button-price {
+        color: var(--point-color);
+      }
+
+      &:hover {
+        border-color: var(--blue-100);
+        background-color: var(--blue-100);
+        color: var(--white);
+      }
+    }
+  }
+
+  &.light {
+    background: var(--white);
+    color: var(--black);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .button-wrapper {
+      --point-color: var(--black);
+
+      a {
+        border: 1px solid var(--point-color);
+        border-radius: 100px;
+        padding-block: var(--x-small-spacing);
+        padding-inline: var(--small-spacing);
+
+        &.button-more {
+          background-color: var(--point-color);
+          color: var(--white);
+        }
+
+        &.button-price {
+          color: var(--point-color);
+        }
+
+        &:hover {
+          border-color: var(--gray-200);
+          background-color: var(--gray-200);
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
